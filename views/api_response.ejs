@@ -1,0 +1,59 @@
+<div class="ui four stackable cards">
+<% for (var i=0;i<data.length;i++){%>
+  <div class="ui link card" >
+  <div class="image">
+    <div class="ui dimmer">
+      <div class="content">
+        <div class="center">
+          <div class="ui inverted button">Add Friend</div>
+          </div>
+        </div>
+      </div>
+      <img src="https://image.tmdb.org/t/p/w185/<%=data[i]['poster_path'] %>">
+    </div>
+    <div class="content">
+      <div class="header"><%=data[i]['title']%></div>
+        <div class="meta">
+          <a class="group"><%=data[i]['release_date']%></a>
+        </div>
+      <div class="description"><%=data[i]['overview'].substring(0,150)%>...</div>
+    </div>
+    <div class="extra content">
+      <a class="right floated created" onclick="like_video(<%=data[i]['id']%>)">Like</a>
+      <a class="friends" onclick="watch_later(<%=data[i]['id']%>)">WatchLater</a>
+    </div>
+  </div>
+
+  <%}%>
+</div>
+</br>
+
+
+<% if (pages > 0) { %>
+    <ul class="ui pagination menu">
+        <% if (current == 1) { %>
+            <li class="disabled item"><a>First</a></li>
+        <% } else { %>
+            <li class="item"><a href="#" onclick="change(1);">First</a></li>
+        <% } %>
+        <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+        <% if (i !== 1) { %>
+            <li class="disabled item"><a>...</a></li>
+        <% } %>
+        <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+            <% if (i == current) { %>
+                <li class="active item"><a><%= i %></a></li>
+            <% } else { %>
+                <li class="item"><a href="#" onclick="change(<%=i%>)"><%= i %></a></li>
+            <% } %>
+            <% if (i == Number(current) + 4 && i < pages) { %>
+                <li class="disabled item"><a>...</a></li>
+            <% } %>
+        <% } %>
+        <% if (current == pages) { %>
+            <li class="disabled item"><a>Last</a></li>
+        <% } else { %>
+            <li class="item"><a href="#" onclick="change(<%=pages%>)">Last</a></li>
+        <% } %>
+    </ul>
+<% } %>

@@ -1,0 +1,87 @@
+<% include partials/header %>
+  <div class="bg">
+    <div class="ui main  container">
+      <div class="ui huge header" style="color:#f1f1f1; font-family:Comfortaa;">Search anything here!</div>
+      <div class="ui search anything">
+  <div class="ui icon input" style="width:100%">
+    <input class="prompt" placeholder="Movie Name/Artist/Anything" type="text" >
+    <i class="search icon"></i>
+  </div>
+  <div class="results"></div>
+</div>
+    </div>
+
+<div class="ui container">  
+  
+<div class="ui grid">
+  <div class="eight wide column">
+   <h1 class="ui header">Top Rated</h1>
+   <table class="ui celled padded table">
+  <thead>
+    <tr>
+    <th>Poster</th>
+    <th>Name</th>
+    <th>%age</th>
+    <th>Overview</th>
+  </tr></thead>
+  <tbody>
+    <% 
+    top_rated.forEach(function(tp){%>
+      <tr>
+      <td><img src="https://image.tmdb.org/t/p/w185/<%=tp.poster_path%>" class="ui tiny image"></td>
+      <td><a href="https://www.themoviedb.org/movie/<%=tp.id%>" target="_blank"><%=tp.title%></a></td>
+      <td><%=tp.vote_average * 10%></td>
+      <td><%=tp.overview.substring(0,25);%>...</td>
+      </tr>
+    <%})%>
+  </tbody>
+  <tfoot>
+    <tr><th colspan="5">
+      <div class="ui right floated pagination menu">
+        <a class="item" href="top-rated">More!</a>
+        
+      </div>
+    </th>
+  </tr></tfoot>
+    
+</table> 
+  </div>
+  <div class="eight wide column">
+  <h1 class="ui header">Recently Released</h1>
+  <table class="ui celled padded table">
+  <thead>
+    <tr>
+    <th>Poster</th>
+    <th>Name</th>
+    <th>%age</th>
+    <th>Overview</th>
+  </tr></thead>
+  <tbody>
+    <% 
+    discover.forEach(function(tp){%>
+      <tr>
+      <td><img src="https://image.tmdb.org/t/p/w185/<%=tp.poster_path%>" class="ui tiny image"></td>
+      <td><a href="https://www.themoviedb.org/movie/<%=tp.id%>" target="_blank"><%=tp.title%></a></td>
+      <td><%=tp.vote_average * 10%></td>
+      <td><%=tp.overview.substring(0,25);%>...</td>
+      </tr>
+    <%})%>
+  </tbody>
+  <tfoot>
+    <tr><th colspan="5">
+      <div class="ui right floated pagination menu">
+        <a class="item" href="recently-released">More!</a>
+        
+      </div>
+    </th>
+  </tr></tfoot>
+    
+</table>
+  </div>
+  
+</div>
+  
+  
+</div>
+
+  <% include partials/footer %>

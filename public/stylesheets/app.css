@@ -1,0 +1,56 @@
+* {
+  font-family: Comfortaa;
+}
+
+h1{
+  font-family: Comfortaa !important;
+  color:white !important;
+}
+.contact-icon i:hover{
+  color: #26A69A;
+}
+
+i.icon {
+  font-size: 2.0em;
+}
+
+.container.main {
+  padding-top: 7.0em;
+  font-family: Comfortaa;
+  padding-bottom: 5.0em;
+}
+
+#search {
+  display: inline;
+  margin-left: 50px;
+}
+
+.bg {
+  background: url("/images/xyz.png") no-repeat fixed;
+  background-size: cover;
+}
+
+.star-imdb {
+  font-size: 0.75em;
+  color: #FFAB00;
+}
+
+.out10 {
+  color: #BDBDBD;
+  font-size: 0.65em;
+}
+
+.imdbRating {
+  color: #212121;
+  font-size: 1.25em;
+}
+
+.imdbRating1 {
+  color: #ffffff;
+  font-size: 1.25em;
+}
+
+.movie-content {
+  font-size: 1.2em;
+  font-weight: 700;
+}

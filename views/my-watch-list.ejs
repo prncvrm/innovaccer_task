@@ -1,0 +1,23 @@
+<% include partials/header %>
+<div class="bg">
+
+<div class="ui container" style="padding-top:84px;">
+  <div class="ui huge header" style="font-family:Comfortaa; font-size:3em; color:#f1f1f1;">
+    My Watch List
+  </div>
+<hr>
+<div class="ui segment" id="loading">
+    <p></p>
+    <div class="ui active dimmer">
+      <div class="ui loader"></div>
+    </div>
+  </div>
+<div id="api_response">
+  
+</div>
+<hr>
+</div>
+<% include partials/footer %>
+<script type="text/javascript">
+  watch_list(1);
+</script>

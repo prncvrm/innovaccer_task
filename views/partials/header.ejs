@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <title>Show My Movie</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+  <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+</head>
+
+<body>
+  <div class="ui fixed inverted menu">
+    <div class="ui container navbar">
+      <div class="header item"><i class="film icon"></i>Show My Movie</div>
+      
+      
+      <a href="/" class="item">Home</a>
+      
+      <a href="/top-rated" class="item">Top Rated</a>
+      <a href="/recently-released" class="item">Recently Released</a>
+      <a href="#" onclick="(function(){
+          $('.ui.modal.login').modal('show');
+          return false;
+})();return false;" class="item login_logout">Login</a>
+    </div>
+  </div>
+<% include login %>

@@ -1,0 +1,41 @@
+<% include partials/header %>
+<div class="bg">
+
+<div class="ui container" style="padding-top:84px;">
+  <div class="ui huge header" style="font-family:Comfortaa; font-size:3em; color:#f1f1f1;">
+    Top Rated
+  </div>
+<!-- <div class="ui secondary  menu">
+  <div class="left menu">
+    <div class="ui item" style="width:100%">
+      <select class="ui fluid search dropdown genre" multiple="" >
+        <% for(var i=0;i<genre.length;i++){%>
+          <option value="<%=i%>"><%=genre[i]%></option>
+        <%}%>
+      </select>
+    </div>
+    <div class="ui item">
+      <select class="ui fluid search dropdown sort">
+        <% for(var i=0;i<sort.length;i++){%>
+          <option value="<%=sort[i][1]%>"><%=sort[i][0]%></option>
+        <%}%>
+      </select>
+    </div>
+  </div>
+</div> -->
+<hr>
+<div class="ui segment" id="loading">
+    <p></p>
+    <div class="ui active dimmer">
+      <div class="ui loader"></div>
+    </div>
+  </div>
+<div id="api_response">
+  
+</div>
+<hr>
+</div>
+<% include partials/footer %>
+<script type="text/javascript">
+  top_rated(1);
+</script>
