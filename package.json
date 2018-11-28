@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Aakash Goel",
-  "license": "ISC",
+  "author": "Prince Verma",
+  "license": "None",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.5.7",
